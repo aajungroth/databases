@@ -14,8 +14,9 @@ dbConnection.on('connect', function(err) {
     console.log(err);
   } else {
     console.log('CONNECTED SON!!');
-    exports.dbConnection;
   }
 });
 
 dbConnection.connect();
+
+module.exports.dbConnection;

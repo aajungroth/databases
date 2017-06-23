@@ -8,21 +8,21 @@ USE chat;
   -- DROP TABLE IF EXISTS `Messages`;
 CREATE TABLE `messages` (
   `id` INTEGER NOT NULL AUTO_INCREMENT,
-  `user_id` INTEGER NOT NULL,
-  `room` VARCHAR(50) ,
-  `message` VARCHAR(200) NOT NULL,
-  PRIMARY KEY (`id`)
+  `userid` INTEGER NOT NULL,
+  `roomname` VARCHAR(20) ,
+  `text` VARCHAR(200) NOT NULL,
+  PRIMARY KEY (ID)
 );
 
 -- DROP TABLE IF EXISTS `user`;
 
-CREATE TABLE `user` (
+CREATE TABLE `users` (
   `id` INTEGER NOT NULL AUTO_INCREMENT,
-  `username` VARCHAR(20) NOT NULL,
-  PRIMARY KEY (`id`)
+  `username` VARCHAR(40) NOT NULL,
+  PRIMARY KEY (ID)
 );
 
-ALTER TABLE `messages` ADD FOREIGN KEY (user_id) REFERENCES `user` (`id`);
+--ALTER TABLE `messages` ADD FOREIGN KEY (user_id) REFERENCES `user` (`id`);
 
 /* Create other tables and define schemas for them here! */
 
